@@ -1,0 +1,21 @@
+name: ci
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev,advisor]" streamlit altair
+      - name: lint
+        run: ruff check . && ruff format --check .
+      - name: test (원본 데이터 없이 도는 테스트만)
+        run: pytest -q
+      - name: README 수치가 results와 일치하는지
+        run: python scripts/build_readme.py --check
+      - name: 앱이 import 되는지
+        run: python -c "import ast,sys; ast.parse(open('app/streamlit_app.py').read())"

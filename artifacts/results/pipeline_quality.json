@@ -1,0 +1,162 @@
+{
+  "contracts": [
+    {
+      "name": "C1_map_value_domain",
+      "severity": "block",
+      "description": "맵 값은 {0,1,2}만 허용",
+      "n_checked": 811457,
+      "n_failed": 0,
+      "examples": [],
+      "passed": true,
+      "fail_rate": 0.0
+    },
+    {
+      "name": "C2_map_shape_positive",
+      "severity": "block",
+      "description": "맵 행·열 수 > 0",
+      "n_checked": 811457,
+      "n_failed": 0,
+      "examples": [],
+      "passed": true,
+      "fail_rate": 0.0
+    },
+    {
+      "name": "C3_has_dies",
+      "severity": "block",
+      "description": "다이가 1개 이상 존재",
+      "n_checked": 811457,
+      "n_failed": 0,
+      "examples": [],
+      "passed": true,
+      "fail_rate": 0.0
+    },
+    {
+      "name": "C4_die_size_matches_map",
+      "severity": "warn",
+      "description": "원본 dieSize 컬럼 = 맵의 비0 셀 수",
+      "n_checked": 811457,
+      "n_failed": 0,
+      "examples": [],
+      "passed": true,
+      "fail_rate": 0.0
+    },
+    {
+      "name": "C5_label_vocabulary",
+      "severity": "block",
+      "description": "패턴 라벨은 ['Center', 'Donut', 'Edge-Loc', 'Edge-Ring', 'Loc', 'Near-full', 'Random', 'Scratch', 'none'] 중 하나 또는 없음",
+      "n_checked": 811457,
+      "n_failed": 0,
+      "examples": [],
+      "passed": true,
+      "fail_rate": 0.0
+    },
+    {
+      "name": "C6_split_vocabulary",
+      "severity": "warn",
+      "description": "원본 분할 라벨은 Training/Test 또는 없음",
+      "n_checked": 811457,
+      "n_failed": 0,
+      "examples": [],
+      "passed": true,
+      "fail_rate": 0.0
+    },
+    {
+      "name": "C7_lot_shape_consistency",
+      "severity": "warn",
+      "description": "같은 lot 안에서 맵 크기(rows×cols)가 하나",
+      "n_checked": 46293,
+      "n_failed": 126,
+      "examples": [
+        "lot10532",
+        "lot10555",
+        "lot10558",
+        "lot11027",
+        "lot11172"
+      ],
+      "passed": false,
+      "fail_rate": 0.0027217937917179704
+    },
+    {
+      "name": "C8_unique_lot_wafer",
+      "severity": "warn",
+      "description": "(lot_name, wafer_index) 조합이 유일",
+      "n_checked": 811457,
+      "n_failed": 0,
+      "examples": [],
+      "passed": true,
+      "fail_rate": 0.0
+    }
+  ],
+  "rows_in": 811457,
+  "rows_out": 811457,
+  "dropped_by_reason": {
+    "domain_ok": 0,
+    "shape_ok": 0,
+    "has_dies": 0,
+    "label_known": 0
+  },
+  "summary_by_role": [
+    {
+      "role": "test",
+      "wafers": 163314,
+      "lots": 9257,
+      "labeled": 35400.0,
+      "dies": 302603017.0,
+      "mean_fail_rate": 0.09852450802639104
+    },
+    {
+      "role": "train",
+      "wafers": 486943,
+      "lots": 27843,
+      "labeled": 103027.0,
+      "dies": 895500649.0,
+      "mean_fail_rate": 0.09642908061005823
+    },
+    {
+      "role": "valid",
+      "wafers": 161200,
+      "lots": 9193,
+      "labeled": 34523.0,
+      "dies": 295787523.0,
+      "mean_fail_rate": 0.0967934150868792
+    }
+  ],
+  "pattern_counts": [
+    {
+      "pattern": "none",
+      "n": 147431
+    },
+    {
+      "pattern": "Edge-Ring",
+      "n": 9680
+    },
+    {
+      "pattern": "Edge-Loc",
+      "n": 5189
+    },
+    {
+      "pattern": "Center",
+      "n": 4294
+    },
+    {
+      "pattern": "Loc",
+      "n": 3593
+    },
+    {
+      "pattern": "Scratch",
+      "n": 1193
+    },
+    {
+      "pattern": "Random",
+      "n": 866
+    },
+    {
+      "pattern": "Donut",
+      "n": 555
+    },
+    {
+      "pattern": "Near-full",
+      "n": 149
+    }
+  ]
+}

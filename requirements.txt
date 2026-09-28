@@ -1,0 +1,5 @@
+# 배포(Streamlit Community Cloud)용 최소 의존성 — 앱은 artifacts/만 읽는다
+numpy>=2.0
+pandas>=2.2
+altair>=5
+streamlit>=1.40

@@ -1,0 +1,559 @@
+{
+ "prompt_hash": {
+  "v1_free": "0e96dfb07937",
+  "v2_rules": "e50109012a6b",
+  "v3_rules_cited": "4361fc599d96",
+  "v4_named_cites": "33d664a6888d"
+ },
+ "policy": {
+  "n_high": 16,
+  "screen_frac": 0.01417,
+  "risk_threshold": 0.3103712201118469,
+  "cost_reduction": 0.05254,
+  "gdbn_cost_reduction": 0.03215,
+  "escape_rate": 0.01
+ },
+ "cases": [
+  {
+   "ref": "W1",
+   "wafer_id": 553105,
+   "pattern_pred": "none",
+   "pattern_prob": 0.9992406248328597,
+   "fail_rate": 0.18679775280898878,
+   "n_pass": 579,
+   "n_high_risk": 23,
+   "high_risk_share": 0.039723661485319514
+  },
+  {
+   "ref": "W2",
+   "wafer_id": 672644,
+   "pattern_pred": "none",
+   "pattern_prob": 0.9480753442293198,
+   "fail_rate": 0.0,
+   "n_pass": 710,
+   "n_high_risk": 0,
+   "high_risk_share": 0.0
+  },
+  {
+   "ref": "W3",
+   "wafer_id": 21259,
+   "pattern_pred": "Edge-Ring",
+   "pattern_prob": 0.9999998227436776,
+   "fail_rate": 0.19441860465116279,
+   "n_pass": 866,
+   "n_high_risk": 28,
+   "high_risk_share": 0.03233256351039261
+  },
+  {
+   "ref": "W4",
+   "wafer_id": 422869,
+   "pattern_pred": "Edge-Ring",
+   "pattern_prob": 0.9999989094874198,
+   "fail_rate": 0.16651162790697674,
+   "n_pass": 896,
+   "n_high_risk": 24,
+   "high_risk_share": 0.026785714285714284
+  },
+  {
+   "ref": "W5",
+   "wafer_id": 518487,
+   "pattern_pred": "Center",
+   "pattern_prob": 0.8672124143052683,
+   "fail_rate": 0.2407766990291262,
+   "n_pass": 391,
+   "n_high_risk": 36,
+   "high_risk_share": 0.09207161125319693
+  },
+  {
+   "ref": "W6",
+   "wafer_id": 457684,
+   "pattern_pred": "Loc",
+   "pattern_prob": 0.8867869209671929,
+   "fail_rate": 0.0014577259475218659,
+   "n_pass": 685,
+   "n_high_risk": 0,
+   "high_risk_share": 0.0
+  },
+  {
+   "ref": "W7",
+   "wafer_id": 515877,
+   "pattern_pred": "Edge-Loc",
+   "pattern_prob": 0.9994743942243087,
+   "fail_rate": 0.36699029126213595,
+   "n_pass": 326,
+   "n_high_risk": 60,
+   "high_risk_share": 0.18404907975460122
+  },
+  {
+   "ref": "W8",
+   "wafer_id": 211187,
+   "pattern_pred": "Scratch",
+   "pattern_prob": 0.9621139520890575,
+   "fail_rate": 0.022385945026919808,
+   "n_pass": 13800,
+   "n_high_risk": 30,
+   "high_risk_share": 0.002173913043478261
+  },
+  {
+   "ref": "W9",
+   "wafer_id": 767686,
+   "pattern_pred": "Random",
+   "pattern_prob": 0.9520104638352329,
+   "fail_rate": 0.29433139534883723,
+   "n_pass": 971,
+   "n_high_risk": 380,
+   "high_risk_share": 0.3913491246138002
+  },
+  {
+   "ref": "W10",
+   "wafer_id": 929,
+   "pattern_pred": "Near-full",
+   "pattern_prob": 0.9999997709448784,
+   "fail_rate": 0.9193245778611632,
+   "n_pass": 43,
+   "n_high_risk": 43,
+   "high_risk_share": 1.0
+  },
+  {
+   "ref": "W11",
+   "wafer_id": 279517,
+   "pattern_pred": "Donut",
+   "pattern_prob": 0.9933719901080988,
+   "fail_rate": 0.2143928035982009,
+   "n_pass": 1048,
+   "n_high_risk": 114,
+   "high_risk_share": 0.10877862595419847
+  },
+  {
+   "ref": "W12",
+   "wafer_id": 324105,
+   "pattern_pred": "Loc",
+   "pattern_prob": 0.787516919563958,
+   "fail_rate": 0.006931994741245368,
+   "n_pass": 8309,
+   "n_high_risk": 8,
+   "high_risk_share": 0.0009628114093152004
+  }
+ ],
+ "rule_actions": {
+  "W1": "SCREEN_HIGH_RISK",
+  "W2": "RELEASE",
+  "W3": "SCREEN_HIGH_RISK",
+  "W4": "SCREEN_HIGH_RISK",
+  "W5": "SCREEN_HIGH_RISK",
+  "W6": "RELEASE",
+  "W7": "SCREEN_HIGH_RISK",
+  "W8": "SCREEN_HIGH_RISK",
+  "W9": "HOLD_REVIEW",
+  "W10": "SCRAP_CANDIDATE",
+  "W11": "SCREEN_HIGH_RISK",
+  "W12": "SCREEN_HIGH_RISK"
+ },
+ "facts": [
+  {
+   "fid": "P1",
+   "name": "적용 제품 적층 단수",
+   "rendered": "16단"
+  },
+  {
+   "fid": "P2",
+   "name": "선별 기준: 통과 다이 중 위험 상위 비율",
+   "rendered": "1.4%"
+  },
+  {
+   "fid": "P3",
+   "name": "선별 기준 위험 점수 임계값",
+   "rendered": "0.31"
+  },
+  {
+   "fid": "P4",
+   "name": "REAL-proxy 실험에서 이 정책의 양품 스택당 비용 절감률",
+   "rendered": "5.3%"
+  },
+  {
+   "fid": "P5",
+   "name": "같은 실험에서 GDBN 규칙의 비용 절감률",
+   "rendered": "3.2%"
+  },
+  {
+   "fid": "P6",
+   "name": "잠재불량 비율 가정",
+   "rendered": "1.0%"
+  },
+  {
+   "fid": "W1.1",
+   "name": "W1 예측 패턴",
+   "rendered": "none"
+  },
+  {
+   "fid": "W1.2",
+   "name": "W1 예측 패턴 확률",
+   "rendered": "99.9%"
+  },
+  {
+   "fid": "W1.3",
+   "name": "W1 웨이퍼 불량률",
+   "rendered": "18.7%"
+  },
+  {
+   "fid": "W1.4",
+   "name": "W1 통과 다이 수",
+   "rendered": "579개"
+  },
+  {
+   "fid": "W1.5",
+   "name": "W1 임계값 이상 고위험 통과 다이 수",
+   "rendered": "23개"
+  },
+  {
+   "fid": "W1.6",
+   "name": "W1 고위험 다이 비중",
+   "rendered": "4.0%"
+  },
+  {
+   "fid": "W2.1",
+   "name": "W2 예측 패턴",
+   "rendered": "none"
+  },
+  {
+   "fid": "W2.2",
+   "name": "W2 예측 패턴 확률",
+   "rendered": "94.8%"
+  },
+  {
+   "fid": "W2.3",
+   "name": "W2 웨이퍼 불량률",
+   "rendered": "0.0%"
+  },
+  {
+   "fid": "W2.4",
+   "name": "W2 통과 다이 수",
+   "rendered": "710개"
+  },
+  {
+   "fid": "W2.5",
+   "name": "W2 임계값 이상 고위험 통과 다이 수",
+   "rendered": "0개"
+  },
+  {
+   "fid": "W2.6",
+   "name": "W2 고위험 다이 비중",
+   "rendered": "0.0%"
+  },
+  {
+   "fid": "W3.1",
+   "name": "W3 예측 패턴",
+   "rendered": "Edge-Ring"
+  },
+  {
+   "fid": "W3.2",
+   "name": "W3 예측 패턴 확률",
+   "rendered": "100.0%"
+  },
+  {
+   "fid": "W3.3",
+   "name": "W3 웨이퍼 불량률",
+   "rendered": "19.4%"
+  },
+  {
+   "fid": "W3.4",
+   "name": "W3 통과 다이 수",
+   "rendered": "866개"
+  },
+  {
+   "fid": "W3.5",
+   "name": "W3 임계값 이상 고위험 통과 다이 수",
+   "rendered": "28개"
+  },
+  {
+   "fid": "W3.6",
+   "name": "W3 고위험 다이 비중",
+   "rendered": "3.2%"
+  },
+  {
+   "fid": "W4.1",
+   "name": "W4 예측 패턴",
+   "rendered": "Edge-Ring"
+  },
+  {
+   "fid": "W4.2",
+   "name": "W4 예측 패턴 확률",
+   "rendered": "100.0%"
+  },
+  {
+   "fid": "W4.3",
+   "name": "W4 웨이퍼 불량률",
+   "rendered": "16.7%"
+  },
+  {
+   "fid": "W4.4",
+   "name": "W4 통과 다이 수",
+   "rendered": "896개"
+  },
+  {
+   "fid": "W4.5",
+   "name": "W4 임계값 이상 고위험 통과 다이 수",
+   "rendered": "24개"
+  },
+  {
+   "fid": "W4.6",
+   "name": "W4 고위험 다이 비중",
+   "rendered": "2.7%"
+  },
+  {
+   "fid": "W5.1",
+   "name": "W5 예측 패턴",
+   "rendered": "Center"
+  },
+  {
+   "fid": "W5.2",
+   "name": "W5 예측 패턴 확률",
+   "rendered": "86.7%"
+  },
+  {
+   "fid": "W5.3",
+   "name": "W5 웨이퍼 불량률",
+   "rendered": "24.1%"
+  },
+  {
+   "fid": "W5.4",
+   "name": "W5 통과 다이 수",
+   "rendered": "391개"
+  },
+  {
+   "fid": "W5.5",
+   "name": "W5 임계값 이상 고위험 통과 다이 수",
+   "rendered": "36개"
+  },
+  {
+   "fid": "W5.6",
+   "name": "W5 고위험 다이 비중",
+   "rendered": "9.2%"
+  },
+  {
+   "fid": "W6.1",
+   "name": "W6 예측 패턴",
+   "rendered": "Loc"
+  },
+  {
+   "fid": "W6.2",
+   "name": "W6 예측 패턴 확률",
+   "rendered": "88.7%"
+  },
+  {
+   "fid": "W6.3",
+   "name": "W6 웨이퍼 불량률",
+   "rendered": "0.1%"
+  },
+  {
+   "fid": "W6.4",
+   "name": "W6 통과 다이 수",
+   "rendered": "685개"
+  },
+  {
+   "fid": "W6.5",
+   "name": "W6 임계값 이상 고위험 통과 다이 수",
+   "rendered": "0개"
+  },
+  {
+   "fid": "W6.6",
+   "name": "W6 고위험 다이 비중",
+   "rendered": "0.0%"
+  },
+  {
+   "fid": "W7.1",
+   "name": "W7 예측 패턴",
+   "rendered": "Edge-Loc"
+  },
+  {
+   "fid": "W7.2",
+   "name": "W7 예측 패턴 확률",
+   "rendered": "99.9%"
+  },
+  {
+   "fid": "W7.3",
+   "name": "W7 웨이퍼 불량률",
+   "rendered": "36.7%"
+  },
+  {
+   "fid": "W7.4",
+   "name": "W7 통과 다이 수",
+   "rendered": "326개"
+  },
+  {
+   "fid": "W7.5",
+   "name": "W7 임계값 이상 고위험 통과 다이 수",
+   "rendered": "60개"
+  },
+  {
+   "fid": "W7.6",
+   "name": "W7 고위험 다이 비중",
+   "rendered": "18.4%"
+  },
+  {
+   "fid": "W8.1",
+   "name": "W8 예측 패턴",
+   "rendered": "Scratch"
+  },
+  {
+   "fid": "W8.2",
+   "name": "W8 예측 패턴 확률",
+   "rendered": "96.2%"
+  },
+  {
+   "fid": "W8.3",
+   "name": "W8 웨이퍼 불량률",
+   "rendered": "2.2%"
+  },
+  {
+   "fid": "W8.4",
+   "name": "W8 통과 다이 수",
+   "rendered": "13,800개"
+  },
+  {
+   "fid": "W8.5",
+   "name": "W8 임계값 이상 고위험 통과 다이 수",
+   "rendered": "30개"
+  },
+  {
+   "fid": "W8.6",
+   "name": "W8 고위험 다이 비중",
+   "rendered": "0.2%"
+  },
+  {
+   "fid": "W9.1",
+   "name": "W9 예측 패턴",
+   "rendered": "Random"
+  },
+  {
+   "fid": "W9.2",
+   "name": "W9 예측 패턴 확률",
+   "rendered": "95.2%"
+  },
+  {
+   "fid": "W9.3",
+   "name": "W9 웨이퍼 불량률",
+   "rendered": "29.4%"
+  },
+  {
+   "fid": "W9.4",
+   "name": "W9 통과 다이 수",
+   "rendered": "971개"
+  },
+  {
+   "fid": "W9.5",
+   "name": "W9 임계값 이상 고위험 통과 다이 수",
+   "rendered": "380개"
+  },
+  {
+   "fid": "W9.6",
+   "name": "W9 고위험 다이 비중",
+   "rendered": "39.1%"
+  },
+  {
+   "fid": "W10.1",
+   "name": "W10 예측 패턴",
+   "rendered": "Near-full"
+  },
+  {
+   "fid": "W10.2",
+   "name": "W10 예측 패턴 확률",
+   "rendered": "100.0%"
+  },
+  {
+   "fid": "W10.3",
+   "name": "W10 웨이퍼 불량률",
+   "rendered": "91.9%"
+  },
+  {
+   "fid": "W10.4",
+   "name": "W10 통과 다이 수",
+   "rendered": "43개"
+  },
+  {
+   "fid": "W10.5",
+   "name": "W10 임계값 이상 고위험 통과 다이 수",
+   "rendered": "43개"
+  },
+  {
+   "fid": "W10.6",
+   "name": "W10 고위험 다이 비중",
+   "rendered": "100.0%"
+  },
+  {
+   "fid": "W11.1",
+   "name": "W11 예측 패턴",
+   "rendered": "Donut"
+  },
+  {
+   "fid": "W11.2",
+   "name": "W11 예측 패턴 확률",
+   "rendered": "99.3%"
+  },
+  {
+   "fid": "W11.3",
+   "name": "W11 웨이퍼 불량률",
+   "rendered": "21.4%"
+  },
+  {
+   "fid": "W11.4",
+   "name": "W11 통과 다이 수",
+   "rendered": "1,048개"
+  },
+  {
+   "fid": "W11.5",
+   "name": "W11 임계값 이상 고위험 통과 다이 수",
+   "rendered": "114개"
+  },
+  {
+   "fid": "W11.6",
+   "name": "W11 고위험 다이 비중",
+   "rendered": "10.9%"
+  },
+  {
+   "fid": "W12.1",
+   "name": "W12 예측 패턴",
+   "rendered": "Loc"
+  },
+  {
+   "fid": "W12.2",
+   "name": "W12 예측 패턴 확률",
+   "rendered": "78.8%"
+  },
+  {
+   "fid": "W12.3",
+   "name": "W12 웨이퍼 불량률",
+   "rendered": "0.7%"
+  },
+  {
+   "fid": "W12.4",
+   "name": "W12 통과 다이 수",
+   "rendered": "8,309개"
+  },
+  {
+   "fid": "W12.5",
+   "name": "W12 임계값 이상 고위험 통과 다이 수",
+   "rendered": "8개"
+  },
+  {
+   "fid": "W12.6",
+   "name": "W12 고위험 다이 비중",
+   "rendered": "0.1%"
+  },
+  {
+   "fid": "R1",
+   "name": "투입 부적합 판정 불량률 기준",
+   "rendered": "50.0%"
+  },
+  {
+   "fid": "R2",
+   "name": "보류 판정 고위험 다이 비중 기준",
+   "rendered": "20.0%"
+  },
+  {
+   "fid": "R3",
+   "name": "투입 부적합 판정 패턴",
+   "rendered": "Near-full"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+Copyright (c) 2026 최은주 (5solemi5)
+All rights reserved.
+
+이 저장소의 소스 코드와 문서는 포트폴리오 목적으로 열람할 수 있도록 게시되었습니다.
+
+저작권자의 사전 서면 동의 없이 다음 행위를 허가하지 않습니다.
+
+  - 복제, 수정, 2차적 저작물 작성
+  - 배포, 재배포, 공중송신
+  - 상업적 이용
+  - 본 코드 또는 그 일부를 자신의 과제·제출물·제품에 사용하는 행위
+
+열람과 개인적 학습 목적의 참고는 자유롭게 하셔도 됩니다.
+
+--------------------------------------------------------------------------
+
+This repository is published for viewing as a portfolio artifact.
+All rights are reserved by the copyright holder. No permission is granted to
+copy, modify, create derivative works from, distribute, or make commercial use
+of this software or its documentation without prior written consent.
+Viewing and personal study are permitted.
+
+--------------------------------------------------------------------------
+
+데이터 안내
+- WM-811K: Wu, Jang, Chen, "Wafer Map Failure Pattern Recognition and Similarity
+  Ranking for Large-Scale Data Sets", IEEE Trans. Semiconductor Manufacturing 28(1), 2015.
+  MIR Lab 공개 데이터. 이 저장소는 원본 데이터를 재배포하지 않으며, 파생 결과와 축소 표본만 포함합니다.
+- 의존성 패키지는 각자의 라이선스를 따릅니다.
