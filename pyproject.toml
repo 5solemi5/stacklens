@@ -1,0 +1,38 @@
+[project]
+name = "stacklens"
+version = "0.1.0"
+description = "HBM 적층 수율을 위한 KGD 선별 — 실제 웨이퍼맵으로 다이 위험을 추정하고 적층 단수별 최적 선별 정책을 찾는다"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0",
+  "pandas>=2.2",
+  "pyarrow>=16",
+  "duckdb>=1.1",
+  "scikit-learn>=1.5",
+  "lightgbm>=4.3",
+  "scipy>=1.13",
+]
+
+[project.optional-dependencies]
+advisor = ["openai>=1.40", "pydantic>=2.7"]
+app = ["streamlit>=1.40", "altair>=5"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["stacklens*"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["data: 원본 데이터(LSWMD)가 필요한 테스트"]

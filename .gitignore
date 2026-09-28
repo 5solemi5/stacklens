@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# 원본·중간 데이터는 커밋하지 않는다 (LSWMD 라이선스 불명확 · 용량)
+data/
+# 캐시된 LLM 원응답 중 대용량은 제외, 요약 결과는 artifacts/에 둔다
+.cache/
